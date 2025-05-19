@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: sol-savage-sniper
+    env: node
+    buildCommand: pnpm install --no-frozen-lockfile && pnpm run build
+    startCommand: node --experimental-specifier-resolution=node dist/index.js
+    healthCheckPath: /health
